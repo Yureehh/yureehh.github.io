@@ -104,16 +104,10 @@ h6 {
   overflow: hidden;
   transition: all 0.4s ease;
 }
-.custom-btn:hover {
-  color: #00fdc8;
-}
+
 .custom-btn.custom-btn-bg {
   background: #474559;
   color: #ffffff;
-}
-.custom-btn.custom-btn-bg:hover {
-  background: #00fdc8;
-  color: #ffffff !important;
 }
 
 .animated {
@@ -312,40 +306,6 @@ h6 {
 .border {
   border-top: 1px solid #000 !important;
   border-bottom: 1px solid #000 !important;
-}
-
-.dark-mode {
-  background: #0c0c0d;
-}
-.dark-mode .navbar-light .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.8);
-}
-.dark-mode .navbar-light .navbar-nav .nav-link:hover {
-  color: #00fdc8;
-}
-.dark-mode .navbar[class*="headroom--not-top"] {
-  background: #0c0c0d;
-  border-bottom: 1px solid #1f1f1f;
-}
-.dark-mode .small-text {
-  background: #0d0c15;
-  color: #ffffff;
-}
-.dark-mode .feature-card .uil,
-.dark-mode .navbar-light .navbar-brand,
-.dark-mode h1,
-.dark-mode h2,
-.dark-mode h3,
-.dark-mode h4,
-.dark-mode h5,
-.dark-mode h6,
-.dark-mode .color-mode {
-  color: #ffffff;
-}
-.dark-mode .owl-carousel .owl-nav button.owl-next,
-.dark-mode .owl-carousel .owl-nav button.owl-prev,
-.dark-mode .owl-carousel button.owl-dot {
-  color: #ffffff;
 }
 
 .center {
@@ -565,16 +525,6 @@ svg {
   color: #f7f3f3;
 }
 
-.social-links .uil {
-  color: #f7f3f3;
-  font-size: 20px;
-  display: block;
-  margin: 5px 0;
-}
-.social-links .uil:hover {
-  color: #00fdc8;
-}
-
 @media (min-width: 1270px) {
   .owl-theme .owl-dots {
     position: relative;
@@ -671,10 +621,5 @@ svg {
 
   .contact-info {
     flex-direction: column;
-  }
-
-  .social-links li {
-    display: inline-block;
-    vertical-align: top;
   }
 }
