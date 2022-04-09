@@ -138,13 +138,13 @@ strong {
   top: 0;
   right: 0;
   left: 0;
-  animation: BottomTotop 6s linear infinite 0s;
+  animation: BottomTotop 9s linear infinite 0s;
 }
 .animated-item:nth-child(2n + 2) {
-  animation-delay: 2s;
+  animation-delay: 3s;
 }
 .animated-item:nth-child(3n + 3) {
-  animation-delay: 4s;
+  animation-delay: 6s;
 }
 
 @keyframes BottomTotop {
@@ -212,7 +212,7 @@ strong {
 
 .nav-link {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   overflow: hidden;
 }
 .nav-link span {
@@ -372,6 +372,7 @@ svg {
 .socials a {
   height: 5rem;
   width: 5rem;
+  margin: 0 0.3rem;
 }
 
 .socials .icon:hover {
