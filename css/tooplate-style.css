@@ -89,6 +89,10 @@ strong {
   font-weight: bold;
 }
 
+h6 {
+  color: #5b5b5b;
+}
+
 .custom-btn {
   background: white;
   font-weight: bold;
@@ -214,6 +218,7 @@ strong {
   font-weight: bold;
   font-size: 1.3rem;
   overflow: hidden;
+  color: #5b5b5b !important;
 }
 .nav-link span {
   position: relative;
@@ -538,7 +543,7 @@ svg {
 .contact-form .submit-btn {
   background: #00fdc8;
   border-radius: 50px;
-  color: #ffffff;
+  color: #474559;
   font-weight: bold;
   border: 0;
   cursor: pointer;
@@ -546,6 +551,7 @@ svg {
 }
 .contact-form .submit-btn:hover {
   background: #474559;
+  color: #ffffff;
 }
 
 .contact-info {
