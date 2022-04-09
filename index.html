@@ -17,6 +17,8 @@
 
     <!-- MAIN STYLE -->
     <link rel="stylesheet" href="css/tooplate-style.css">
+    <!-- JS -->
+    <script src="js/form.js"></script>
 
   </head>
 
@@ -303,15 +305,24 @@
           <div class="contact-form">
             <h2 class="mb-4 middle-text">Interested in working together? Contact Me!</h2>
 
-            <form target="_top" action="mailto:yureefabbri@gmail.com" method="POST" enctype=”multipart/form-data”
-              name=”EmailForm”>
-              <div class="row middle">
-
-                <div class="ml-lg-auto col-lg-5 col-12 no-margin middle">
-                  <input type="submit" class="form-control submit-btn" value="Write Me An Email">
-                </div>
+            <div class="row middle">
+              <div class="col-lg-6 col-12">
+                <input type="text" class="form-control" name="name" placeholder="Your Name" id="name">
               </div>
-            </form>
+
+              <div class="col-lg-6 col-12">
+                <input type="email" class="form-control" name="subject" placeholder="Subject" id="subject">
+              </div>
+
+              <div class="col-12">
+                <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message"></textarea>
+              </div>
+
+              <div class="ml-lg-auto col-lg-5 col-12 no-margin middle">
+                <input type="button" class="form-control submit-btn" value="Send Email" onclick="sendEmail()">
+              </div>
+            </div>
+
           </div>
         </div>
 

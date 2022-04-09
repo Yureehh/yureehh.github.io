@@ -42,9 +42,6 @@ a {
   text-decoration: none !important;
   transition: all 0.4s ease;
 }
-a:hover {
-  color: #00fdc8 !important;
-}
 
 .navbar-brand .uil {
   font-size: 40px;
