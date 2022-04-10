@@ -22,9 +22,9 @@ body {
 
 .small-text {
   color: #5b5b5b;
-  font-size: 20px;
+  font-size: 23px;
   font-weight: bold;
-  padding: 8px 16px;
+  padding: 8px 16px 8px 1px;
   border-radius: 50px;
   letter-spacing: 0.2px;
 }
@@ -41,6 +41,10 @@ a {
   font-weight: normal;
   text-decoration: none !important;
   transition: all 0.4s ease;
+}
+
+.navbar a:hover {
+  color: #00fdc8 !important;
 }
 
 .navbar-brand .uil {
@@ -93,7 +97,6 @@ h6 {
 .custom-btn {
   background: white;
   font-weight: bold;
-  border: black 2px solid;
   border-radius: 50px;
   padding: 13px 29px;
   font-size: 14px;
@@ -105,6 +108,10 @@ h6 {
 .custom-btn.custom-btn-bg {
   background: #474559;
   color: #ffffff;
+}
+
+.mr-2 {
+  font-size: 47px;
 }
 
 .animated {
@@ -124,13 +131,13 @@ h6 {
 }
 
 .animated-item {
-  font-size: 38px;
+  font-size: 47px;
   line-height: inherit;
   display: block;
   opacity: 0;
   overflow: hidden;
   position: absolute;
-  top: 0;
+  top: -5px;
   right: 0;
   left: 0;
   animation: BottomTotop 9s linear infinite 0s;
@@ -560,7 +567,7 @@ svg {
   }
 
   .animated-item {
-    font-size: 28px;
+    font-size: 47px;
   }
 
   .navbar-collapse {
@@ -577,12 +584,20 @@ svg {
   .animated-info {
     min-width: 200px;
   }
+
+  .mr-2 {
+    font-size: 36px;
+  }
+
   .animated-item {
-    font-size: 30px;
+    font-size: 36px;
   }
 
   .custom-btn-group {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .custom-btn {
