@@ -639,3 +639,15 @@ svg {
     flex-direction: column;
   }
 }
+
+.margin-bot {
+  margin-bottom: 5em !important;
+}
+
+h5 {
+  margin-top: 1em;
+}
+
+.big {
+  font-size: 4em;
+}
