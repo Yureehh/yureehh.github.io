@@ -651,3 +651,10 @@ h5 {
 .big {
   font-size: 4em;
 }
+
+hr {
+  width: 50%;
+  size: "1";
+  color: #ffffff;
+  border: 3px solid #ffffff;
+}
