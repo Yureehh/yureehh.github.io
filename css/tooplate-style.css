@@ -52,8 +52,8 @@ a {
 }
 
 p {
-  font-size: 18px;
-  font-weight: 300;
+  font-size: 20px;
+  font-weight: 500;
   line-height: 1.5;
   color: #5b5b5b;
 }
@@ -74,9 +74,17 @@ h1 {
   margin: 24px 0;
 }
 
+.small-margin {
+  margin: 2px 0 !important;
+}
+
+.small-color {
+  color: #5b5b5b !important;
+}
+
 h2 {
   color: #353535;
-  font-size: 2.4em;
+  font-size: 2em;
   font-weight: bold;
 }
 
@@ -116,6 +124,7 @@ h6 {
 
 .animated {
   position: relative;
+  margin-top: 0px !important;
 }
 
 .animated-info {
@@ -216,7 +225,7 @@ h6 {
   font-weight: bold;
   font-size: 1.3rem;
   overflow: hidden;
-  color: #5b5b5b !important;
+  color: #555555 !important;
 }
 .nav-link span {
   position: relative;
