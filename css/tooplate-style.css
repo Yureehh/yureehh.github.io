@@ -75,7 +75,11 @@ h1 {
 }
 
 .small-margin {
-  margin: 2px 0 !important;
+  margin: 2px 0 2px 0 !important;
+}
+
+.small-margin2 {
+  margin: 0 0 1em 0 !important;
 }
 
 .small-color {
@@ -666,4 +670,8 @@ hr {
   size: "1";
   color: #ffffff;
   border: 3px solid #ffffff;
+}
+
+.item2 figcaption {
+  margin-bottom: 5%;
 }
