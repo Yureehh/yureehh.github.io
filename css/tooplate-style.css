@@ -339,6 +339,11 @@ h6 {
   align-items: center;
   justify-content: center;
   font-size: 1.5em;
+  border: 3px solid black;
+}
+
+.resume:hover {
+  background-color: #c6fff3;
 }
 
 .socials {
