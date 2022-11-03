@@ -12,6 +12,16 @@ body {
   padding-top: 70px;
 }
 
+body {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll; 
+}
+
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
 .bold {
   font-weight: bold;
 }
@@ -141,6 +151,8 @@ h6 {
 
 .animated-item {
   color: #00fdc8;
+  text-shadow: 1.25px 0 #000, -1.25px 0 #000, 0 1.25px #000, 0 -1.25px #000,
+               1.25px 1.25px #000, -1.25px -1.25px #000, 1.25px -1.25px #000, -1.25px 1.25px #000;
 }
 
 .animated-item {
@@ -342,7 +354,11 @@ h6 {
 
 }
 
+<<<<<<< HEAD
 .resumeColor:hover {
+=======
+.resume2:hover {
+>>>>>>> 5edb670b4355ff595c77eec119a4b79a7053b743
   background-color: #00fdc8;
 }
 
