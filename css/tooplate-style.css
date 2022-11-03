@@ -351,14 +351,14 @@ h6 {
   align-items: center;
   justify-content: center;
   font-size: 1.5em;
-
+  border: 3px solid black;
 }
 
-<<<<<<< HEAD
-.resumeColor:hover {
-=======
+.noborder {
+  border: none !important;
+}
+
 .resume2:hover {
->>>>>>> 5edb670b4355ff595c77eec119a4b79a7053b743
   background-color: #00fdc8;
 }
 
