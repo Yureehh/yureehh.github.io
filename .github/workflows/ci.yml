@@ -26,10 +26,21 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-            node-version: '14'
+          node-version: '14'
 
       - name: Install CSSLint
         run: npm install -g csslint
+
+      - name: Find and List Empty CSS Files
+        run: |
+          EMPTY_FILES=$(find . -name "*.css" -type f -empty)
+          if [ -n "$EMPTY_FILES" ]; then
+            echo "Empty CSS files found:"
+            echo "$EMPTY_FILES"
+            exit 1
+          else
+            echo "No empty CSS files found."
+          fi
 
       - name: Run CSSLint
         run: csslint **/*.css
