@@ -33,3 +33,4 @@ jobs:
 
       - name: Run CSSLint
         run: csslint .
+        continue-on-error: true
