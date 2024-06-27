@@ -85,15 +85,15 @@
                 >
               </li>
               <li>
+                <a class="link-button white" id="copyButton"
+                  >Discord user: Yureeh#4871</a
+                >
+              </li>
+              <li>
                 <a href="mailto:fabbri.juri@gmail.com" class="link-button white"
                   >Contact Me</a
                 >
               </li>
-              <!-- <li>
-                <a href="https://example.com/product3" class="link-button white"
-                  >Product 3</a
-                >
-              </li> -->
             </ul>
           </section>
         </header>
@@ -109,6 +109,19 @@
       window.onorientationchange = function () {
         document.body.scrollTop = 0;
       };
+      document
+        .getElementById("copyButton")
+        .addEventListener("click", function () {
+          const textToCopy = "Yureeh#4871";
+          navigator.clipboard.writeText(textToCopy).then(
+            function () {
+              alert("Copied to clipboard: " + textToCopy);
+            },
+            function (err) {
+              console.error("Could not copy text: ", err);
+            }
+          );
+        });
     </script>
   </body>
 </html>
