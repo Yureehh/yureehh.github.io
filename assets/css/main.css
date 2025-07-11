@@ -1189,8 +1189,9 @@ a:hover {
 
 .profile-image {
   width: 50%; /* Use percentage to make it responsive */
-  max-width: 300px; /* Set a maximum width to prevent it from getting too large */
-  height: auto;
+  max-width: 450px; /* Set a maximum width to prevent it from getting too large */
+  /* make it such the image appears circular */
+  height: 450px; /* Set a fixed height to maintain aspect ratio */
   border-radius: 50%; /* Make it circular if desired */
   display: block;
   margin: 0 auto;

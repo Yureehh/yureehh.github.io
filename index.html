@@ -25,14 +25,14 @@
         <!-- Header -->
         <header id="header">
           <img
-            src="assets/css/images/icon.jpg"
+            src="assets/css/images/icon.png"
             alt="Profile"
             class="profile-image"
           />
           <h1>Yureeh</h1>
           <p>
-            Data Scientist &nbsp;&bull;&nbsp; Gaming Enthusiast
-            &nbsp;&bull;&nbsp; Italian
+            Data Scientist &nbsp;&bull;&nbsp; AI Engineer &nbsp;&bull;&nbsp;
+            GiantX Esport Analyst &nbsp;&bull;&nbsp; Gamer
           </p>
           <nav>
             <ul>
@@ -70,18 +70,56 @@
               </li>
             </ul>
           </nav>
-          <!-- Links Section -->
+          <!-- Links / Projects Section -->
           <section id="links">
             <ul>
+              <!-- Main project -->
               <li>
                 <a
                   href="https://lol-oracle-bets.streamlit.app/"
                   class="link-button yellow"
-                  >Bet Ledger</a
+                  >Bets Ledger</a
+                >
+                <li>
+                <a
+                  href="https://github.com/Yureehh"
+                  class="link-button white"
+                  >Oracle Bets</a
+                >
+              </li>
+              </li>
+              <!-- <li>
+                <a
+                  href="https://poker-tracker.example.com"
+                  class="link-button yellow"
+                  >Poker Tracker</a
+                >
+              </li>
+              -->
+              <li>
+                <a
+                  href="https://github.com/Yureehh/Extractly/tree/main"
+                  class="link-button white"
+                  >Extractly</a
                 >
               </li>
               <li>
-                <a href="mailto:fabbri.juri@gmail.com" class="link-button white"
+                <a
+                  href="https://github.com/Yureehh/CodeAtlas"
+                  class="link-button white"
+                  >Code Atlas</a
+                >
+              </li>
+              <!-- <li>
+                <a href="#" class="link-button white" id="slidesmith"
+                  >Slide Smith</a
+                >
+              </li> -->
+              <li>
+                <a
+                  href="mailto:fabbri.juri@gmail.com?subject=Contact%20Via%20Portfolio"
+                  class="link-button white"
+                  id="contact"
                   >Contact Me</a
                 >
               </li>
@@ -92,33 +130,40 @@
     </div>
 
     <script>
-      // Wrap all initialization in DOMContentLoaded for modularity
       document.addEventListener("DOMContentLoaded", () => {
-        // Remove preload class for animations
+        // Remove preload class
         document.body.classList.remove("is-preload");
 
-        // Prevent default touch-move scrolling if desired
+        // Prevent default touch-move
         window.ontouchmove = () => false;
 
-        // On orientation change, reset scroll
+        // Reset scroll on orientation change
         window.onorientationchange = () => {
           document.body.scrollTop = 0;
           document.documentElement.scrollTop = 0;
         };
 
-        // Clipboard copy logic for Discord
+        // Clipboard copy logic for Discord icon
         const discordButton = document.getElementById("discord");
         const discordUsername = "yureeh"; // ← put your actual username here
 
         discordButton.addEventListener("click", async (event) => {
-          event.preventDefault(); // prevent jumping
+          event.preventDefault();
           try {
             await navigator.clipboard.writeText(discordUsername);
-            // You might swap alert for a custom toast in future
             alert(`Copied to clipboard: ${discordUsername}`);
           } catch (err) {
             console.error("Clipboard write failed:", err);
           }
+        });
+
+        // NDA notice for Slide Smith
+        const slideSmith = document.getElementById("slidesmith");
+        slideSmith.addEventListener("click", (event) => {
+          event.preventDefault();
+          alert(
+            "This project is covered by an NDA, but feel free to ask me about it!"
+          );
         });
       });
     </script>
