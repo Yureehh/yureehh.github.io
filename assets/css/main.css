@@ -1161,15 +1161,15 @@ a:hover {
   background-color: #5937a6;
 }
 
-#tiktok {
+#discord {
   color: #f45baf;
 }
 
-#tiktok:before {
+#discord:before {
   border: solid 2px #f45baf;
 }
 
-#tiktok:hover:before {
+#discord:hover:before {
   border: solid 2px #fff;
   background-color: #f45baf;
 }

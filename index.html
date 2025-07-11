@@ -42,17 +42,13 @@
                   class="icon brands fa-x-twitter"
                   id="twitter-x"
                 >
-                  <span class="label">X</span></a
-                >
+                  <span class="label">X</span>
+                </a>
               </li>
               <li>
-                <a
-                  href="https://www.tiktok.com/@yureehhh"
-                  class="icon brands fa-tiktok"
-                  id="tiktok"
-                >
-                  <span class="label">TikTok</span></a
-                >
+                <a href="#" class="icon brands fa-discord" id="discord">
+                  <span class="label">Discord</span>
+                </a>
               </li>
               <li>
                 <a
@@ -60,8 +56,8 @@
                   class="icon brands fa-github"
                   id="github"
                 >
-                  <span class="label">GitHub</span></a
-                >
+                  <span class="label">GitHub</span>
+                </a>
               </li>
               <li>
                 <a
@@ -69,8 +65,8 @@
                   class="icon brands fa-linkedin"
                   id="linkedin"
                 >
-                  <span class="label">LinkedIn</span></a
-                >
+                  <span class="label">LinkedIn</span>
+                </a>
               </li>
             </ul>
           </nav>
@@ -85,9 +81,6 @@
                 >
               </li>
               <li>
-                <a class="link-button white" id="copyButton">Discord</a>
-              </li>
-              <li>
                 <a href="mailto:fabbri.juri@gmail.com" class="link-button white"
                   >Contact Me</a
                 >
@@ -97,29 +90,37 @@
         </header>
       </div>
     </div>
+
     <script>
-      window.onload = function () {
+      // Wrap all initialization in DOMContentLoaded for modularity
+      document.addEventListener("DOMContentLoaded", () => {
+        // Remove preload class for animations
         document.body.classList.remove("is-preload");
-      };
-      window.ontouchmove = function () {
-        return false;
-      };
-      window.onorientationchange = function () {
-        document.body.scrollTop = 0;
-      };
-      document
-        .getElementById("copyButton")
-        .addEventListener("click", function () {
-          const textToCopy = "yureeh";
-          navigator.clipboard.writeText(textToCopy).then(
-            function () {
-              alert("Copied to clipboard: " + textToCopy);
-            },
-            function (err) {
-              console.error("Could not copy text: ", err);
-            }
-          );
+
+        // Prevent default touch-move scrolling if desired
+        window.ontouchmove = () => false;
+
+        // On orientation change, reset scroll
+        window.onorientationchange = () => {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        };
+
+        // Clipboard copy logic for Discord
+        const discordButton = document.getElementById("discord");
+        const discordUsername = "yureeh"; // ← put your actual username here
+
+        discordButton.addEventListener("click", async (event) => {
+          event.preventDefault(); // prevent jumping
+          try {
+            await navigator.clipboard.writeText(discordUsername);
+            // You might swap alert for a custom toast in future
+            alert(`Copied to clipboard: ${discordUsername}`);
+          } catch (err) {
+            console.error("Clipboard write failed:", err);
+          }
         });
+      });
     </script>
   </body>
 </html>
