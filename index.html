@@ -7,10 +7,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript>
-      <link rel="stylesheet" href="assets/css/noscript.css" />
-    </noscript>
     <link
       rel="icon"
       type="image/png"
@@ -18,152 +16,326 @@
       href="assets/css/images/favicons/icons8-male-user-96.png"
     />
   </head>
-  <body class="is-preload">
-    <div id="wrapper">
-      <div id="bg"></div>
-      <div id="main">
-        <!-- Header -->
-        <header id="header">
+  <body class="is-preload" data-theme="dark">
+    <div class="page">
+      <header class="site-header">
+        <div class="header-left">
           <img
             src="assets/css/images/icon.png"
-            alt="Profile"
-            class="profile-image"
+            alt="Yureeh avatar"
+            class="brand-avatar"
           />
-          <h1>Yureeh</h1>
-          <p>
-            Data Scientist &nbsp;&bull;&nbsp; AI Engineer &nbsp;&bull;&nbsp;
-            GiantX Esport Analyst &nbsp;&bull;&nbsp; Gamer
+        </div>
+        <div class="header-center">
+          <span class="brand-title">Yureeh</span>
+        </div>
+        <div class="header-right">
+          <div class="social-row header-socials">
+            <a
+              class="social-link social-x"
+              href="https://x.com/Yureehwastaken"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="X"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26L22.5 21.75h-6.4l-5.014-6.552-5.73 6.552H2.048l7.73-8.84L1.5 2.25h6.564l4.53 5.995zM17.07 19.75h1.833L7.07 4.145H5.11z"
+                />
+              </svg>
+            </a>
+            <a
+              class="social-link social-github"
+              href="https://github.com/Yureehh"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              class="social-link social-linkedin"
+              href="https://www.linkedin.com/in/juri-fabbri/"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              class="social-link social-email"
+              href="mailto:fabbri.juri@gmail.com"
+              aria-label="Email"
+              data-copy="fabbri.juri@gmail.com"
+              data-toast="Email copied"
+            >
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a
+              class="social-link social-discord"
+              rel="noopener noreferrer"
+              target="_blank"
+              data-copy="yureeh"
+              data-toast="Username copied"
+              aria-label="Discord"
+            >
+              <i class="fab fa-discord"></i>
+            </a>
+          </div>
+          <button class="theme-toggle" type="button" aria-label="Toggle theme">
+            <i class="toggle-icon fas fa-moon" aria-hidden="true"></i>
+          </button>
+        </div>
+      </header>
+
+      <section class="callout-banner" aria-labelledby="beyond-frame">
+        <div class="callout-inner">
+          <div class="callout-icon" aria-hidden="true"></div>
+          <h2 class="callout-title" id="beyond-frame">Beyond the Hype</h2>
+          <p class="callout-copy">
+            Concepts that survive contact with reality.
           </p>
-          <nav>
-            <ul>
-              <li>
-                <a
-                  href="https://x.com/Yureehwastaken"
-                  class="icon brands fa-x-twitter"
-                  id="twitter-x"
-                >
-                  <span class="label">X</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="icon brands fa-discord" id="discord">
-                  <span class="label">Discord</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/Yureehh"
-                  class="icon brands fa-github"
-                  id="github"
-                >
-                  <span class="label">GitHub</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/juri-fabbri/"
-                  class="icon brands fa-linkedin"
-                  id="linkedin"
-                >
-                  <span class="label">LinkedIn</span>
-                </a>
-              </li>
+        </div>
+      </section>
+
+      <main>
+        <section class="hero" id="signal">
+          <div class="hero-content">
+            <h2 class="hero-role">About Me</h2>
+            <p class="lead">Based in Italy / Working worldwide</p>
+            <ul class="hero-meta">
+              <li>Data Scientist @ Data Reply</li>
+              <li>Esports analyst</li>
+              <li>Teaching ML/AI online courses</li>
+              <li>Competitive Gamer</li>
             </ul>
-          </nav>
-          <!-- Links / Projects Section -->
-          <section id="links">
-            <ul>
-              <!-- Main project -->
-              <li>
-                <a
-                  href="https://lol-oracle-bets.streamlit.app/"
-                  class="link-button yellow"
-                  >Bets Ledger</a
+            <div class="hero-actions">
+              <a
+                class="btn primary"
+                href="https://github.com/Yureehh"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Explore GitHub</a
+              >
+              <a
+                class="btn secondary"
+                href="data/Juri_Fabbri_Resume.pdf"
+                download
+                >Download CV</a
+              >
+            </div>
+          </div>
+          <aside class="hero-panel">
+            <div class="panel-header">Next focuses</div>
+            <div class="panel-body">
+              <div class="panel-item">
+                <span class="panel-title">RL in Games</span>
+                <span class="panel-copy"
+                  >Reward design, self-play, meta shifts.</span
                 >
-                <li>
-                <a
-                  href="https://github.com/Yureehh/oracle-bets"
-                  class="link-button white"
-                  >Oracle Bets</a
+              </div>
+              <div class="panel-item">
+                <span class="panel-title">ML in Sports</span>
+                <span class="panel-copy"
+                  >Player models, scouting signals, tactics.</span
                 >
-              </li>
-              </li>
-              <!-- <li>
-                <a
-                  href="https://poker-tracker.example.com"
-                  class="link-button yellow"
-                  >Poker Tracker</a
+              </div>
+              <div class="panel-item">
+                <span class="panel-title">Robotics</span>
+                <span class="panel-copy"
+                  >Control loops, perception, sim-to-real.</span
                 >
-              </li>
-              -->
-              <li>
-                <a
-                  href="https://github.com/Yureehh/Extractly/tree/main"
-                  class="link-button white"
-                  >Extractly</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://github.com/Yureehh/CodeAtlas"
-                  class="link-button white"
-                  >Code Atlas</a
-                >
-              </li>
-              <!-- <li>
-                <a href="#" class="link-button white" id="slidesmith"
-                  >Slide Smith</a
-                >
-              </li> -->
-              <li>
-                <a
-                  href="mailto:fabbri.juri@gmail.com?subject=Contact%20Via%20Portfolio"
-                  class="link-button white"
-                  id="contact"
-                  >Contact Me</a
-                >
-              </li>
-            </ul>
-          </section>
-        </header>
-      </div>
+              </div>
+              <div class="hero-note">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span>Open to collabs + research</span>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <section class="projects" id="repos">
+          <div class="section-heading">
+            <div>
+              <h2>Projects worth your clicks</h2>
+              <p>Short list. No fillers.</p>
+            </div>
+            <a
+              class="btn subtle"
+              href="https://github.com/Yureehh?tab=repositories"
+              rel="noopener noreferrer"
+              target="_blank"
+              >Browse all repos</a
+            >
+          </div>
+
+          <div class="projects-grid">
+            <a
+              class="project-card"
+              href="https://github.com/Yureehh/Extractly"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="Extractly repository"
+            >
+              <div
+                class="project-thumb gradient-extractly"
+                style="--thumb-image: url('../../data/extractly.jpg')"
+              >
+                <span>Extractly</span>
+              </div>
+              <div class="project-body">
+                <h3>Extractly</h3>
+                <p>
+                  End-to-end Intelligent Document Processing (IDP). Automates
+                  schema definition and file classification to extract
+                  traceable, structured metadata.
+                </p>
+                <div class="tag-row">
+                  <span>IIP</span>
+                  <span>GenAI</span>
+                  <span>Document Processing</span>
+                </div>
+              </div>
+            </a>
+
+            <a
+              class="project-card"
+              href="https://github.com/Yureehh/Oracle-Bets"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="Oracle Bets repository"
+            >
+              <div
+                class="project-thumb gradient-oracle"
+                style="--thumb-image: url('../../data/oracle_bets.jpg')"
+              >
+                <span>Oracle Bets</span>
+              </div>
+              <div class="project-body">
+                <h3>Oracle-Bets</h3>
+                <p>
+                  Esports predictive engine. Leverages historical player
+                  telemetry to forecast League of Legends match outcomes with
+                  high statistical confidence.
+                </p>
+                <div class="tag-row">
+                  <span>Esports</span>
+                  <span>Probabilities</span>
+                  <span>Python</span>
+                </div>
+              </div>
+            </a>
+
+            <a
+              class="project-card"
+              Clean
+              builds,
+              real-world
+              pressure
+              tested.
+              href="https://github.com/Yureehh/Betting-Dashboard"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="Betting Dashboard repository"
+            >
+              <div
+                class="project-thumb gradient-betting"
+                style="--thumb-image: url('../../data/bets-ledger.jpg')"
+              >
+                <span>Betting Dash</span>
+              </div>
+              <div class="project-body">
+                <h3>Betting-Dashboard</h3>
+                <p>
+                  Real-time performance tracker. Visualizes public betting
+                  ledgers to identify profitability trends and optimize wagering
+                  strategies.
+                </p>
+                <div class="tag-row">
+                  <span>Data Viz</span>
+                  <span>Analytics</span>
+                  <span>Ledger</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+      </main>
     </div>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        // Remove preload class
         document.body.classList.remove("is-preload");
 
-        // Prevent default touch-move
-        window.ontouchmove = () => false;
+        const themeToggle = document.querySelector(".theme-toggle");
+        const toggleIcon = document.querySelector(".toggle-icon");
+        const toggleLabel = document.querySelector(".toggle-label");
+        const storedTheme = localStorage.getItem("theme");
+        const initialTheme = storedTheme || "dark";
 
-        // Reset scroll on orientation change
-        window.onorientationchange = () => {
-          document.body.scrollTop = 0;
-          document.documentElement.scrollTop = 0;
-        };
+        document.body.dataset.theme = initialTheme;
+        toggleIcon.classList.toggle("fa-moon", initialTheme === "dark");
+        toggleIcon.classList.toggle("fa-sun", initialTheme !== "dark");
+        if (toggleLabel) {
+          toggleLabel.textContent = initialTheme === "dark" ? "Dark" : "Light";
+        }
 
-        // Clipboard copy logic for Discord icon
-        const discordButton = document.getElementById("discord");
-        const discordUsername = "yureeh"; // ← put your actual username here
-
-        discordButton.addEventListener("click", async (event) => {
-          event.preventDefault();
-          try {
-            await navigator.clipboard.writeText(discordUsername);
-            alert(`Copied to clipboard: ${discordUsername}`);
-          } catch (err) {
-            console.error("Clipboard write failed:", err);
+        themeToggle.addEventListener("click", () => {
+          const nextTheme =
+            document.body.dataset.theme === "dark" ? "light" : "dark";
+          document.body.dataset.theme = nextTheme;
+          localStorage.setItem("theme", nextTheme);
+          toggleIcon.classList.toggle("fa-moon", nextTheme === "dark");
+          toggleIcon.classList.toggle("fa-sun", nextTheme !== "dark");
+          if (toggleLabel) {
+            toggleLabel.textContent = nextTheme === "dark" ? "Dark" : "Light";
           }
         });
 
-        // NDA notice for Slide Smith
-        const slideSmith = document.getElementById("slidesmith");
-        slideSmith.addEventListener("click", (event) => {
-          event.preventDefault();
-          alert(
-            "This project is covered by an NDA, but feel free to ask me about it!"
-          );
+        const showCopyToast = (target, message) => {
+          const toast = document.createElement("div");
+          toast.className = "copy-toast";
+          toast.textContent = message;
+          document.body.appendChild(toast);
+          const rect = target.getBoundingClientRect();
+          const left = rect.left + rect.width / 2;
+          const top = Math.max(12, rect.top - 8);
+          toast.style.left = `${left}px`;
+          toast.style.top = `${top}px`;
+          requestAnimationFrame(() => toast.classList.add("show"));
+          setTimeout(() => {
+            toast.classList.remove("show");
+            setTimeout(() => toast.remove(), 200);
+          }, 1200);
+        };
+
+        document.querySelectorAll("[data-copy]").forEach((target) => {
+          target.addEventListener("click", () => {
+            const text = target.dataset.copy;
+            if (!text) return;
+            const message = target.dataset.toast || "Copied";
+            if (navigator.clipboard && window.isSecureContext) {
+              navigator.clipboard
+                .writeText(text)
+                .catch(() => {})
+                .finally(() => showCopyToast(target, message));
+              return;
+            }
+            const field = document.createElement("textarea");
+            field.value = text;
+            field.setAttribute("readonly", "");
+            field.style.position = "fixed";
+            field.style.opacity = "0";
+            document.body.appendChild(field);
+            field.select();
+            try {
+              document.execCommand("copy");
+            } catch (_) {
+              // Ignore copy errors.
+            }
+            document.body.removeChild(field);
+            showCopyToast(target, message);
+          });
         });
       });
     </script>
