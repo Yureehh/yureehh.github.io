@@ -1,25 +1,25 @@
-# Juri Fabbri's Profile Landing Page
+# Juri Fabbri Portfolio
 
-Welcome to my profile. This page serves as a central hub for all my professional and personal redirects. Feel free to explore and connect with me through various platforms.
+Static GitHub Pages portfolio for Juri Fabbri, aka Yureeh.
 
-## About Me
+The root page is the personal/professional entry point: Data Scientist, AI Engineer, AI Tutor, and builder of GenAI/data projects that occasionally become suspiciously serious.
 
-I am Juri Fabbri, a passionate Data Scientist specializing in Machine Learning. With extensive experience in developing and managing data science projects, I am dedicated to improving my knowledge and contributing to innovative solutions. I thrive in environments that challenge my skills and allow me to collaborate with like-minded professionals.
+## Pages
 
-In addition to my professional pursuits, I am an avid gamer with a deep passion for video games. My current side projects focus on developing an algorithm capable of predicting outcomes of League of Legends (LoL) games and leveraging these predictions for profitable betting strategies. You can find more details and track my progress through my public ledger on my website.
+- `/` - main portfolio and featured builds
+- `/websmith/` - bilingual IT/EN landing page for WebSmith: websites and lightweight automation for local businesses and SMEs
 
-## Connect with Me
+## Stack
 
-Feel free to reach out and connect with me through any of the following platforms:
+Plain HTML, CSS, and a tiny amount of JavaScript. No build step, no framework, no dependency ceremony.
 
-- [Twitter](https://x.com/Yureehwastaken)
-- [TikTok](https://www.tiktok.com/@yureehhh)
-- [GitHub](https://github.com/Yureehh)
-- [LinkedIn](https://www.linkedin.com/in/juri-fabbri/)
-- [Email](mailto:fabbri.juri@gmail.com)
+## Local Preview
 
-For more details on my current projects and to view my public ledger, visit my [website](https://yureehh.github.io/).
+```sh
+python3 -m http.server 8080
+```
 
----
+Then open:
 
-Thank you for visiting my profile landing page. I look forward to connecting with you!
+- `http://127.0.0.1:8080/`
+- `http://127.0.0.1:8080/websmith/`

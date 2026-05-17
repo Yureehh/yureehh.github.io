@@ -1,48 +1,290 @@
 <!DOCTYPE html>
 <html lang="en" xml:lang="en">
   <head>
-    <title>Yureeh</title>
+    <title>Juri Fabbri | Data Scientist & AI Engineer</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
+    <meta
+      name="description"
+      content="Juri Fabbri, aka Yureeh. Data Scientist and AI Engineer building AI systems, automation workflows, data products, and suspiciously serious side projects."
+    />
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main.css?v=15" />
     <link
       rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/css/images/favicons/icons8-male-user-96.png"
+      type="image/svg+xml"
+      sizes="any"
+      href="/favicon.svg?v=3"
     />
   </head>
   <body class="is-preload" data-theme="dark">
     <div class="page">
       <header class="site-header">
-        <div class="header-left">
+        <a class="brand" href="#top" aria-label="Go to top">
           <img
             src="assets/css/images/icon.png"
             alt="Yureeh avatar"
             class="brand-avatar"
           />
+          <span>
+            <strong>Yureeh</strong>
+            <small>Portfolio</small>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="#work">Work</a>
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact Me</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="nav-cta" href="websmith/">WebSmith</a>
+          <button class="theme-toggle" type="button" aria-label="Toggle theme">
+            <i class="toggle-icon fas fa-moon" aria-hidden="true"></i>
+          </button>
         </div>
-        <div class="header-center">
-          <span class="brand-title">Yureeh</span>
-        </div>
-        <div class="header-right">
-          <div class="social-row header-socials">
+      </header>
+
+      <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-content">
+            <p class="eyebrow">Data Scientist / AI Engineer / AI Tutor</p>
+            <h1 id="hero-title">
+              I build AI systems, data products, and useful automations.
+            </h1>
+            <p class="lead">
+              After hours, sports models and RL agents keep turning my "quick
+              experiments" into suspiciously serious projects.
+            </p>
+            <div class="availability-pill">
+              <span class="status-dot" aria-hidden="true"></span>
+              Open to freelance work: AI, data, websites, automation
+            </div>
+            <div class="hero-actions">
+              <a class="btn primary" href="#projects">View projects</a>
+              <a class="btn secondary" href="websmith/"
+                >Websites + Ops for SMEs</a
+              >
+              <a class="btn subtle" href="data/Juri_Fabbri_Resume.pdf" download
+                >Download CV</a
+              >
+            </div>
+          </div>
+
+          <aside class="signal-panel" aria-label="Current focus">
+            <dl class="signal-list">
+              <div>
+                <dt>Now</dt>
+                <dd>Data Scientist / AI Engineer @ Data Reply</dd>
+              </div>
+              <div>
+                <dt>Teaching</dt>
+                <dd>ML, GenAI, and practical AI courses</dd>
+              </div>
+              <div>
+                <dt>Building</dt>
+                <dd>Document intelligence, predictions, and automation</dd>
+              </div>
+              <div>
+                <dt>Currently exploring</dt>
+                <dd>
+                  RL environments that admit when they are guessing.
+                </dd>
+              </div>
+              <div>
+                <dt>Location</dt>
+                <dd>Italy / Remote-friendly</dd>
+              </div>
+            </dl>
+          </aside>
+        </section>
+
+        <section class="work-strip" id="work" aria-label="Professional focus">
+          <div>
+            <span>01</span>
+            <strong>AI engineering</strong>
+            <p>RAG, agents, evaluation, document workflows, and useful GenAI.</p>
+          </div>
+          <div>
+            <span>02</span>
+            <strong>Data products</strong>
+            <p>Models, dashboards, pipelines, RL experiments, and decisions with receipts.</p>
+          </div>
+          <div>
+            <span>03</span>
+            <strong>Education</strong>
+            <p>AI tutoring for people who want to ship, not just nod wisely.</p>
+          </div>
+        </section>
+
+        <section class="services" id="services">
+          <div class="section-heading">
+            <p class="eyebrow">What I can help with</p>
+            <h2>Professional, but still allowed to have a pulse.</h2>
+          </div>
+          <div class="service-grid">
+            <article class="service-card">
+              <i class="fas fa-brain" aria-hidden="true"></i>
+              <h3>AI & Data Engineering</h3>
+              <p>
+                From messy inputs to working systems: pipelines, models,
+                analytics, and technical prototypes that can grow up later.
+              </p>
+            </article>
+            <article class="service-card">
+              <i class="fas fa-robot" aria-hidden="true"></i>
+              <h3>GenAI Automation</h3>
+              <p>
+                RAG, agents, document processing, and workflow automation where
+                AI actually removes work instead of adding dashboards to ignore.
+              </p>
+            </article>
+            <article class="service-card">
+              <i class="fas fa-chalkboard-teacher" aria-hidden="true"></i>
+              <h3>AI Tutoring</h3>
+              <p>
+                Practical ML and AI explanations for students, teams, and
+                builders who want to understand enough to make good decisions.
+              </p>
+            </article>
+            <article class="service-card service-highlight">
+              <i class="fas fa-magic" aria-hidden="true"></i>
+              <h3>WebSmith</h3>
+              <p>
+                Professional static websites, sharper positioning, bilingual
+                copy, intake forms, and lightweight workflows for small
+                local businesses and SMEs that need more than a digital business
+                card.
+              </p>
+              <a href="websmith/">Open WebSmith</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="projects" id="projects">
+          <div class="section-heading split">
+            <div>
+              <p class="eyebrow">Featured builds</p>
+              <h2>Things that started as ideas and got suspiciously real.</h2>
+            </div>
             <a
-              class="social-link social-x"
-              href="https://x.com/Yureehwastaken"
+              class="btn subtle"
+              href="https://github.com/Yureehh?tab=repositories"
               rel="noopener noreferrer"
               target="_blank"
-              aria-label="X"
+              >Browse GitHub</a
             >
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  d="M18.244 2.25h3.308l-7.227 8.26L22.5 21.75h-6.4l-5.014-6.552-5.73 6.552H2.048l7.73-8.84L1.5 2.25h6.564l4.53 5.995zM17.07 19.75h1.833L7.07 4.145H5.11z"
-                />
-              </svg>
+          </div>
+
+          <div class="projects-grid">
+            <a
+              class="project-card"
+              href="https://github.com/Yureehh/Oracle-Bets"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="OracleBets repository"
+            >
+              <div
+                class="project-thumb"
+                style="--thumb-image: url('../../data/oracle_bets.jpg')"
+              >
+                <span>OracleBets</span>
+              </div>
+              <div class="project-body">
+                <h3>OracleBets</h3>
+                <p>
+                  A sports and esports prediction engine that turns match
+                  history, player signals, and market movement into
+                  probabilistic betting insights.
+                </p>
+                <div class="tag-row">
+                  <span>Prediction</span>
+                  <span>Sports analytics</span>
+                  <span>Python</span>
+                </div>
+              </div>
+            </a>
+
+            <a
+              class="project-card"
+              href="websmith/"
+              aria-label="WebSmith page"
+            >
+              <div
+                class="project-thumb"
+                style="--thumb-image: url('../../data/websmith.jpg')"
+              >
+                <span>WebSmith</span>
+              </div>
+              <div class="project-body">
+                <h3>WebSmith</h3>
+                <p>
+                  A business intake-to-website pipeline for generating polished
+                  static sites, bilingual copy, useful structure, and optional
+                  automation around contact and request handling.
+                </p>
+                <div class="tag-row">
+                  <span>Automation</span>
+                  <span>Websites</span>
+                  <span>SMEs</span>
+                </div>
+              </div>
+            </a>
+
+            <a
+              class="project-card"
+              href="https://github.com/Yureehh/Extractly"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="Extractly repository"
+            >
+              <div
+                class="project-thumb"
+                style="--thumb-image: url('../../data/extractly.jpg')"
+              >
+                <span>Extractly</span>
+              </div>
+              <div class="project-body">
+                <h3>Extractly</h3>
+                <p>
+                  An AI-powered document intelligence system that classifies
+                  files, extracts schema-aware metadata, and turns messy
+                  documents into structured, traceable data.
+                </p>
+                <div class="tag-row">
+                  <span>GenAI</span>
+                  <span>Document AI</span>
+                  <span>Documents</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <section class="contact" id="contact">
+          <div>
+            <p class="eyebrow">Contact Me</p>
+            <h2>Have a weirdly specific AI/data problem?</h2>
+            <p>
+              Lovely! Those are usually the most interesting ones.<br />
+              I am available for freelance work, tutoring, and technical
+              consulting.
+            </p>
+          </div>
+          <div class="contact-actions" aria-label="Contact links">
+            <a
+              class="social-link social-linkedin"
+              href="https://www.linkedin.com/in/juri-fabbri/"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin-in"></i>
             </a>
             <a
               class="social-link social-github"
@@ -54,212 +296,48 @@
               <i class="fab fa-github"></i>
             </a>
             <a
-              class="social-link social-linkedin"
-              href="https://www.linkedin.com/in/juri-fabbri/"
-              rel="noopener noreferrer"
-              target="_blank"
-              aria-label="LinkedIn"
-            >
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a
-              class="social-link social-email"
+              class="btn primary email-action contact-mail"
               href="mailto:fabbri.juri@gmail.com"
-              aria-label="Email"
               data-copy="fabbri.juri@gmail.com"
-              data-toast="Email copied"
+              data-toast="Email copied to clipboard"
+              >Open mail app</a
             >
-              <i class="fas fa-envelope"></i>
-            </a>
             <a
-              class="social-link social-discord"
+              class="social-link social-x"
+              href="https://x.com/Yureewastaken"
               rel="noopener noreferrer"
               target="_blank"
+              aria-label="X"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26L22.5 21.75h-6.4l-5.014-6.552-5.73 6.552H2.048l7.73-8.84L1.5 2.25h6.564l4.53 5.995zM17.07 19.75h1.833L7.07 4.145H5.11z"
+                />
+              </svg>
+            </a>
+            <button
+              class="social-link social-discord"
+              type="button"
               data-copy="yureeh"
-              data-toast="Username copied"
+              data-toast="Discord username copied"
               aria-label="Discord"
             >
               <i class="fab fa-discord"></i>
-            </a>
-          </div>
-          <button class="theme-toggle" type="button" aria-label="Toggle theme">
-            <i class="toggle-icon fas fa-moon" aria-hidden="true"></i>
-          </button>
-        </div>
-      </header>
-
-      <section class="callout-banner" aria-labelledby="beyond-frame">
-        <div class="callout-inner">
-          <div class="callout-icon" aria-hidden="true"></div>
-          <h2 class="callout-title" id="beyond-frame">Beyond the Hype</h2>
-          <p class="callout-copy">
-            Concepts that survive contact with reality.
-          </p>
-        </div>
-      </section>
-
-      <main>
-        <section class="hero" id="signal">
-          <div class="hero-content">
-            <h2 class="hero-role">About Me</h2>
-            <p class="lead">Based in Italy / Working worldwide</p>
-            <ul class="hero-meta">
-              <li>Data Scientist @ Data Reply</li>
-              <li>Esports analyst</li>
-              <li>Teaching ML/AI online courses</li>
-              <li>Competitive Gamer</li>
-            </ul>
-            <div class="hero-actions">
-              <a
-                class="btn primary"
-                href="https://github.com/Yureehh"
-                rel="noopener noreferrer"
-                target="_blank"
-                >Explore GitHub</a
-              >
-              <a
-                class="btn secondary"
-                href="data/Juri_Fabbri_Resume.pdf"
-                download
-                >Download CV</a
-              >
-            </div>
-          </div>
-          <aside class="hero-panel">
-            <div class="panel-header">Current Interests</div>
-            <div class="panel-body">
-              <div class="panel-item">
-                <span class="panel-title">RL in Games</span>
-                <span class="panel-copy"
-                  >Reward design, self-play, meta shifts.</span
-                >
-              </div>
-              <div class="panel-item">
-                <span class="panel-title">ML in Sports</span>
-                <span class="panel-copy"
-                  >Player models, scouting signals, tactics.</span
-                >
-              </div>
-              <div class="panel-item">
-                <span class="panel-title">Robotics</span>
-                <span class="panel-copy"
-                  >Control loops, perception, sim-to-real.</span
-                >
-              </div>
-              <div class="hero-note">
-                <span class="status-dot" aria-hidden="true"></span>
-                <span>Open to collabs + research</span>
-              </div>
-            </div>
-          </aside>
-        </section>
-
-        <section class="projects" id="repos">
-          <div class="section-heading">
-            <div>
-              <h2>Projects worth your clicks</h2>
-              <p>Short list. No fillers.</p>
-            </div>
-            <a
-              class="btn subtle"
-              href="https://github.com/Yureehh?tab=repositories"
-              rel="noopener noreferrer"
-              target="_blank"
-              >Browse all repos</a
-            >
-          </div>
-
-          <div class="projects-grid">
-            <a
-              class="project-card"
-              href="https://github.com/Yureehh/Extractly"
-              rel="noopener noreferrer"
-              target="_blank"
-              aria-label="Extractly repository"
-            >
-              <div
-                class="project-thumb gradient-extractly"
-                style="--thumb-image: url('../../data/extractly.jpg')"
-              >
-                <span>Extractly</span>
-              </div>
-              <div class="project-body">
-                <h3>Extractly</h3>
-                <p>
-                  End-to-end Intelligent Document Processing (IDP). Automates
-                  schema definition and file classification to extract
-                  traceable, structured metadata.
-                </p>
-                <div class="tag-row">
-                  <span>IIP</span>
-                  <span>GenAI</span>
-                  <span>Document Processing</span>
-                </div>
-              </div>
-            </a>
-
-            <a
-              class="project-card"
-              href="https://github.com/Yureehh/Oracle-Bets"
-              rel="noopener noreferrer"
-              target="_blank"
-              aria-label="Oracle Bets repository"
-            >
-              <div
-                class="project-thumb gradient-oracle"
-                style="--thumb-image: url('../../data/oracle_bets.jpg')"
-              >
-                <span>Oracle Bets</span>
-              </div>
-              <div class="project-body">
-                <h3>Oracle-Bets</h3>
-                <p>
-                  Esports predictive engine. Leverages historical player
-                  telemetry to forecast League of Legends match outcomes with
-                  high statistical confidence.
-                </p>
-                <div class="tag-row">
-                  <span>Esports</span>
-                  <span>Probabilities</span>
-                  <span>Python</span>
-                </div>
-              </div>
-            </a>
-
-            <a
-              class="project-card"
-              Clean
-              builds,
-              real-world
-              pressure
-              tested.
-              href="https://github.com/Yureehh/Betting-Dashboard"
-              rel="noopener noreferrer"
-              target="_blank"
-              aria-label="Betting Dashboard repository"
-            >
-              <div
-                class="project-thumb gradient-betting"
-                style="--thumb-image: url('../../data/bets-ledger.jpg')"
-              >
-                <span>Betting Dash</span>
-              </div>
-              <div class="project-body">
-                <h3>Betting-Dashboard</h3>
-                <p>
-                  Real-time performance tracker. Visualizes public betting
-                  ledgers to identify profitability trends and optimize wagering
-                  strategies.
-                </p>
-                <div class="tag-row">
-                  <span>Data Viz</span>
-                  <span>Analytics</span>
-                  <span>Ledger</span>
-                </div>
-              </div>
-            </a>
+            </button>
           </div>
         </section>
+
+        <a
+          class="signal-banner footer-signal"
+          href="#top"
+          aria-labelledby="signal-banner-title"
+        >
+          <div class="signal-gem" aria-hidden="true"></div>
+          <div>
+            <h2 id="signal-banner-title">Beyond the Hype</h2>
+            <p>Systems with taste. Click to return to orbit.</p>
+          </div>
+        </a>
       </main>
     </div>
 
@@ -269,16 +347,12 @@
 
         const themeToggle = document.querySelector(".theme-toggle");
         const toggleIcon = document.querySelector(".toggle-icon");
-        const toggleLabel = document.querySelector(".toggle-label");
         const storedTheme = localStorage.getItem("theme");
         const initialTheme = storedTheme || "dark";
 
         document.body.dataset.theme = initialTheme;
         toggleIcon.classList.toggle("fa-moon", initialTheme === "dark");
         toggleIcon.classList.toggle("fa-sun", initialTheme !== "dark");
-        if (toggleLabel) {
-          toggleLabel.textContent = initialTheme === "dark" ? "Dark" : "Light";
-        }
 
         themeToggle.addEventListener("click", () => {
           const nextTheme =
@@ -287,54 +361,41 @@
           localStorage.setItem("theme", nextTheme);
           toggleIcon.classList.toggle("fa-moon", nextTheme === "dark");
           toggleIcon.classList.toggle("fa-sun", nextTheme !== "dark");
-          if (toggleLabel) {
-            toggleLabel.textContent = nextTheme === "dark" ? "Dark" : "Light";
-          }
         });
 
-        const showCopyToast = (target, message) => {
+        const showToast = (target, message) => {
           const toast = document.createElement("div");
           toast.className = "copy-toast";
-          toast.textContent = message;
+          const copiedText = target.dataset.copy;
+          toast.innerHTML = copiedText
+            ? `<strong>${message}</strong><span>${copiedText}</span>`
+            : `<strong>${message}</strong>`;
           document.body.appendChild(toast);
-          const rect = target.getBoundingClientRect();
-          const left = rect.left + rect.width / 2;
-          const top = Math.max(12, rect.top - 8);
-          toast.style.left = `${left}px`;
-          toast.style.top = `${top}px`;
           requestAnimationFrame(() => toast.classList.add("show"));
           setTimeout(() => {
             toast.classList.remove("show");
-            setTimeout(() => toast.remove(), 200);
-          }, 1200);
+            setTimeout(() => toast.remove(), 220);
+          }, 1900);
         };
 
         document.querySelectorAll("[data-copy]").forEach((target) => {
           target.addEventListener("click", () => {
             const text = target.dataset.copy;
             if (!text) return;
-            const message = target.dataset.toast || "Copied";
             if (navigator.clipboard && window.isSecureContext) {
-              navigator.clipboard
-                .writeText(text)
-                .catch(() => {})
-                .finally(() => showCopyToast(target, message));
-              return;
+              navigator.clipboard.writeText(text).catch(() => {});
             }
-            const field = document.createElement("textarea");
-            field.value = text;
-            field.setAttribute("readonly", "");
-            field.style.position = "fixed";
-            field.style.opacity = "0";
-            document.body.appendChild(field);
-            field.select();
-            try {
-              document.execCommand("copy");
-            } catch (_) {
-              // Ignore copy errors.
-            }
-            document.body.removeChild(field);
-            showCopyToast(target, message);
+            showToast(target, target.dataset.toast || "Copied");
+          });
+        });
+
+        document.querySelectorAll(".signal-banner").forEach((banner) => {
+          banner.addEventListener("click", () => {
+            banner.classList.add("is-paused");
+            requestAnimationFrame(() => banner.blur());
+            window.setTimeout(() => {
+              banner.classList.remove("is-paused");
+            }, 900);
           });
         });
       });
