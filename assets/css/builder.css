@@ -311,13 +311,17 @@ h1 {
 }
 
 .btn.primary {
-  background: linear-gradient(120deg, #6d28d9, #475569);
+  background: linear-gradient(120deg, #7c3aed, #4f46e5);
   color: #ffffff;
+  box-shadow: 0 14px 34px rgba(109, 40, 217, 0.18);
 }
 
 .btn.secondary {
-  border-color: color-mix(in srgb, var(--accent) 36%, var(--line));
-  background: var(--surface-strong);
+  border-color: color-mix(in srgb, var(--accent) 44%, var(--line));
+  background:
+    linear-gradient(120deg, color-mix(in srgb, var(--accent) 12%, transparent), color-mix(in srgb, var(--accent-2) 16%, transparent)),
+    var(--surface-strong);
+  color: var(--ink);
 }
 
 .hero-summary {

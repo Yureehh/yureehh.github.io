@@ -411,15 +411,22 @@ h1 {
 }
 
 .btn.primary {
-  background: linear-gradient(120deg, #6d28d9, #475569);
+  background: linear-gradient(120deg, #7c3aed, #4f46e5);
   color: #ffffff;
+  box-shadow: 0 14px 34px rgba(109, 40, 217, 0.2);
 }
 
 .btn.secondary {
-  border-color: color-mix(in srgb, var(--accent) 38%, var(--border));
-  background: linear-gradient(120deg, #334155, #6d28d9);
+  border-color: color-mix(in srgb, var(--accent) 46%, var(--border));
+  background:
+    linear-gradient(120deg, color-mix(in srgb, var(--accent) 18%, transparent), color-mix(in srgb, #475569 24%, transparent)),
+    var(--bg-elevated);
   color: #ffffff;
-  box-shadow: 0 12px 30px rgba(109, 40, 217, 0.14);
+  box-shadow: 0 12px 30px rgba(109, 40, 217, 0.12);
+}
+
+body[data-theme="light"] .btn.secondary {
+  color: var(--text-primary);
 }
 
 .btn.subtle {
@@ -903,6 +910,10 @@ button.btn {
 }
 
 .social-x {
+  --social: #e5e7eb;
+}
+
+body[data-theme="light"] .social-x {
   --social: #111827;
 }
 
