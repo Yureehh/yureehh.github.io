@@ -22,32 +22,32 @@ body {
 }
 
 body[data-theme="dark"] {
-  --bg: #080712;
-  --bg-elevated: #121021;
-  --bg-card: rgba(15, 13, 28, 0.9);
-  --text-primary: #f5f7fb;
-  --text-secondary: #b9b5cf;
-  --accent: #a78bfa;
-  --accent-2: #d8b4fe;
-  --accent-3: #f0abfc;
-  --border: rgba(196, 181, 253, 0.2);
+  --bg: #0d1117;
+  --bg-elevated: #141922;
+  --bg-card: rgba(20, 25, 34, 0.94);
+  --text-primary: #f4f5f7;
+  --text-secondary: #aeb6c2;
+  --accent: #8b5cf6;
+  --accent-2: #64748b;
+  --accent-3: #d97706;
+  --border: rgba(203, 213, 225, 0.16);
   --shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
-  --soft: rgba(167, 139, 250, 0.14);
+  --soft: rgba(139, 92, 246, 0.11);
 }
 
 body[data-theme="light"] {
   color-scheme: light;
-  --bg: #f7f8fb;
+  --bg: #f5f7f6;
   --bg-elevated: #ffffff;
   --bg-card: rgba(255, 255, 255, 0.94);
-  --text-primary: #0f172a;
-  --text-secondary: #526072;
-  --accent: #7c3aed;
-  --accent-2: #9333ea;
-  --accent-3: #6d28d9;
-  --border: rgba(15, 23, 42, 0.12);
-  --shadow: 0 22px 55px rgba(15, 23, 42, 0.12);
-  --soft: rgba(124, 58, 237, 0.1);
+  --text-primary: #111827;
+  --text-secondary: #56616a;
+  --accent: #6d28d9;
+  --accent-2: #64748b;
+  --accent-3: #b45309;
+  --border: rgba(17, 24, 39, 0.12);
+  --shadow: 0 22px 55px rgba(17, 24, 39, 0.1);
+  --soft: rgba(109, 40, 217, 0.08);
 }
 
 body::before {
@@ -56,9 +56,9 @@ body::before {
   inset: 0;
   z-index: -2;
   background:
-    radial-gradient(circle at 10% 7%, rgba(167, 139, 250, 0.18), transparent 34rem),
-    radial-gradient(circle at 84% 16%, rgba(240, 171, 252, 0.13), transparent 30rem),
-    radial-gradient(circle at 68% 88%, rgba(129, 140, 248, 0.12), transparent 34rem),
+    radial-gradient(circle at 10% 7%, rgba(139, 92, 246, 0.11), transparent 34rem),
+    radial-gradient(circle at 84% 16%, rgba(100, 116, 139, 0.1), transparent 30rem),
+    radial-gradient(circle at 68% 88%, rgba(217, 119, 6, 0.06), transparent 34rem),
     linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent);
 }
 
@@ -157,7 +157,7 @@ a {
 
 .site-nav a {
   background: rgba(255, 255, 255, 0.035);
-  border: 2px solid rgba(216, 180, 254, 0.24);
+  border: 2px solid color-mix(in srgb, var(--accent) 22%, var(--border));
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.025);
 }
 
@@ -175,14 +175,14 @@ a {
 }
 
 .nav-cta {
-  border: 2px solid rgba(216, 180, 254, 0.48);
+  border: 2px solid color-mix(in srgb, var(--accent) 44%, var(--border));
   background:
-    linear-gradient(120deg, rgba(167, 139, 250, 0.28), rgba(240, 171, 252, 0.16)),
+    linear-gradient(120deg, rgba(139, 92, 246, 0.18), rgba(100, 116, 139, 0.12)),
     var(--bg-elevated);
   color: var(--text-primary);
   box-shadow:
-    0 0 0 4px rgba(167, 139, 250, 0.12),
-    0 12px 32px rgba(124, 58, 237, 0.16);
+    0 0 0 4px rgba(139, 92, 246, 0.08),
+    0 12px 32px rgba(109, 40, 217, 0.12);
 }
 
 .theme-toggle {
@@ -214,9 +214,9 @@ main {
   border: 1px solid var(--border);
   border-radius: 24px;
   background:
-    radial-gradient(circle at 22% 10%, rgba(167, 139, 250, 0.34), transparent 22rem),
-    radial-gradient(circle at 80% 80%, rgba(240, 171, 252, 0.2), transparent 20rem),
-    linear-gradient(135deg, rgba(129, 140, 248, 0.14), transparent 54%),
+    radial-gradient(circle at 22% 10%, rgba(139, 92, 246, 0.16), transparent 22rem),
+    radial-gradient(circle at 80% 80%, rgba(100, 116, 139, 0.13), transparent 20rem),
+    linear-gradient(135deg, rgba(109, 40, 217, 0.08), transparent 54%),
     var(--bg-card);
   box-shadow: var(--shadow);
   color: inherit;
@@ -233,10 +233,10 @@ main {
   inset: -45%;
   background: conic-gradient(
     from 0deg,
-    rgba(167, 139, 250, 0.22),
-    rgba(240, 171, 252, 0.15),
-    rgba(129, 140, 248, 0.16),
-    rgba(167, 139, 250, 0.22)
+    rgba(139, 92, 246, 0.2),
+    rgba(100, 116, 139, 0.14),
+    rgba(217, 119, 6, 0.1),
+    rgba(139, 92, 246, 0.2)
   );
   opacity: 0;
   transition: opacity 0.25s ease;
@@ -269,7 +269,7 @@ main {
   border: 1px solid var(--accent);
   border-radius: 14px;
   background: linear-gradient(140deg, var(--soft), rgba(255, 255, 255, 0.08));
-  box-shadow: 0 14px 32px rgba(167, 139, 250, 0.34);
+  box-shadow: 0 14px 32px rgba(139, 92, 246, 0.22);
   position: relative;
   transform: rotate(45deg);
   transition: transform 0.4s ease;
@@ -289,7 +289,7 @@ main {
   inset: 18px;
   border-radius: 50%;
   background: #fff;
-  box-shadow: 0 0 14px rgba(216, 180, 254, 0.9);
+  box-shadow: 0 0 14px rgba(139, 92, 246, 0.65);
 }
 
 .signal-banner h2 {
@@ -369,17 +369,17 @@ h1 {
   gap: 10px;
   max-width: 100%;
   margin-top: 24px;
-  border: 1px solid rgba(216, 180, 254, 0.28);
+  border: 1px solid color-mix(in srgb, var(--accent) 26%, var(--border));
   border-radius: 999px;
   background:
-    linear-gradient(120deg, rgba(124, 58, 237, 0.16), rgba(240, 171, 252, 0.1)),
+    linear-gradient(120deg, rgba(139, 92, 246, 0.1), rgba(100, 116, 139, 0.08)),
     rgba(255, 255, 255, 0.035);
   color: var(--text-primary);
   font-size: 0.95rem;
   font-weight: 800;
   line-height: 1.25;
   padding: 10px 14px;
-  box-shadow: 0 12px 32px rgba(124, 58, 237, 0.12);
+  box-shadow: 0 12px 32px rgba(109, 40, 217, 0.1);
 }
 
 .hero-actions,
@@ -411,15 +411,15 @@ h1 {
 }
 
 .btn.primary {
-  background: linear-gradient(120deg, #6677e8, #655bd0);
+  background: linear-gradient(120deg, #6d28d9, #475569);
   color: #ffffff;
 }
 
 .btn.secondary {
-  border-color: rgba(196, 181, 253, 0.36);
-  background: linear-gradient(120deg, #9f6ad4, #cf6aa8);
+  border-color: color-mix(in srgb, var(--accent) 38%, var(--border));
+  background: linear-gradient(120deg, #334155, #6d28d9);
   color: #ffffff;
-  box-shadow: 0 12px 30px rgba(159, 106, 212, 0.16);
+  box-shadow: 0 12px 30px rgba(109, 40, 217, 0.14);
 }
 
 .btn.subtle {
@@ -447,7 +447,7 @@ h1 {
   right: -96px;
   top: -72px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(167, 139, 250, 0.24), transparent 68%);
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.14), transparent 68%);
 }
 
 .signal-header {
@@ -464,8 +464,8 @@ h1 {
   flex: 0 0 10px;
   align-self: center;
   border-radius: 50%;
-  background: #a78bfa;
-  box-shadow: 0 0 18px rgba(167, 139, 250, 0.85);
+  background: var(--accent);
+  box-shadow: 0 0 18px color-mix(in srgb, var(--accent) 72%, transparent);
 }
 
 .signal-list {
@@ -584,9 +584,9 @@ h1 {
 }
 
 .service-highlight {
-  border-color: rgba(216, 180, 254, 0.34);
+  border-color: color-mix(in srgb, var(--accent) 30%, var(--border));
   background:
-    linear-gradient(140deg, rgba(167, 139, 250, 0.23), transparent 58%),
+    linear-gradient(140deg, rgba(139, 92, 246, 0.12), transparent 58%),
     var(--bg-card);
 }
 
@@ -638,9 +638,9 @@ h1 {
 .thumb-builder {
   background:
     linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.68)),
-    radial-gradient(circle at 25% 25%, rgba(167, 139, 250, 0.92), transparent 32%),
-    radial-gradient(circle at 78% 20%, rgba(240, 171, 252, 0.84), transparent 28%),
-    linear-gradient(135deg, #172033, #0f172a 58%, #312e81);
+    radial-gradient(circle at 25% 25%, rgba(139, 92, 246, 0.62), transparent 32%),
+    radial-gradient(circle at 78% 20%, rgba(100, 116, 139, 0.58), transparent 28%),
+    linear-gradient(135deg, #172033, #0f172a 58%, #3b2f63);
 }
 
 .project-body {
@@ -697,7 +697,7 @@ h1 {
   border: 1px solid var(--border);
   border-radius: 16px;
   background:
-    linear-gradient(135deg, rgba(167, 139, 250, 0.22), rgba(240, 171, 252, 0.14)),
+    linear-gradient(135deg, rgba(139, 92, 246, 0.13), rgba(100, 116, 139, 0.1)),
     var(--bg-elevated);
   color: var(--text-primary);
   font-size: 0.95rem;
@@ -821,7 +821,7 @@ button.btn {
 }
 
 .social-link {
-  --social: #a78bfa;
+  --social: #64748b;
   position: relative;
   display: inline-grid;
   width: 48px;
@@ -899,11 +899,11 @@ button.btn {
 }
 
 .social-github {
-  --social: #a78bfa;
+  --social: #94a3b8;
 }
 
 .social-x {
-  --social: #f472b6;
+  --social: #111827;
 }
 
 .social-discord {
