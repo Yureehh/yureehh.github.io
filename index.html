@@ -17,7 +17,7 @@
       rel="icon"
       type="image/svg+xml"
       sizes="any"
-      href="/favicon.svg?v=3"
+      href="/favicon.svg?v=4"
     />
   </head>
   <body class="is-preload" data-theme="dark">
@@ -326,18 +326,6 @@
             </button>
           </div>
         </section>
-
-        <a
-          class="signal-banner footer-signal"
-          href="#top"
-          aria-labelledby="signal-banner-title"
-        >
-          <div class="signal-gem" aria-hidden="true"></div>
-          <div>
-            <h2 id="signal-banner-title">Beyond the Hype</h2>
-            <p>Systems with taste. Click to return to orbit.</p>
-          </div>
-        </a>
       </main>
     </div>
 
@@ -386,16 +374,6 @@
               navigator.clipboard.writeText(text).catch(() => {});
             }
             showToast(target, target.dataset.toast || "Copied");
-          });
-        });
-
-        document.querySelectorAll(".signal-banner").forEach((banner) => {
-          banner.addEventListener("click", () => {
-            banner.classList.add("is-paused");
-            requestAnimationFrame(() => banner.blur());
-            window.setTimeout(() => {
-              banner.classList.remove("is-paused");
-            }, 900);
           });
         });
       });

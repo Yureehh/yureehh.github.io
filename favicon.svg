@@ -1,21 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="JF">
   <defs>
-    <linearGradient id="bg" x1="10" y1="8" x2="56" y2="58" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#7c3aed"/>
-      <stop offset="0.52" stop-color="#a855f7"/>
+    <linearGradient id="frame" x1="10" y1="8" x2="54" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8b5cf6"/>
       <stop offset="1" stop-color="#4f46e5"/>
     </linearGradient>
-    <linearGradient id="slash" x1="20" y1="46" x2="47" y2="18" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#f0abfc"/>
-      <stop offset="1" stop-color="#93c5fd"/>
+    <linearGradient id="mark" x1="18" y1="17" x2="47" y2="50" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d7dce5"/>
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="18" fill="#080712"/>
-  <rect x="6" y="6" width="52" height="52" rx="15" fill="url(#bg)"/>
-  <g transform="translate(1 0)">
-    <path d="M15 43c5 4 13 3 13-5V19h-7v19c0 2-2 3-5 1l-3 5z" fill="#f8fafc"/>
-    <path d="M34 19h17v7H41v7h8v7h-8v9h-7V19z" fill="#f8fafc"/>
-    <path d="M18 51 47 13" stroke="url(#slash)" stroke-width="4" stroke-linecap="round" opacity="0.95"/>
-    <circle cx="49" cy="15" r="3" fill="#f0abfc"/>
-  </g>
+  <rect width="64" height="64" rx="14" fill="#0d1117"/>
+  <rect x="6" y="6" width="52" height="52" rx="12" fill="#141922" stroke="url(#frame)" stroke-width="2"/>
+  <path d="M20 20h10v21c0 7-4 11-11 11-3 0-6-.7-8.5-2.1l2.4-6.8c1.6.9 3.1 1.3 4.8 1.3 2.6 0 3.9-1.4 3.9-4.2V27.7H20V20Z" fill="url(#mark)"/>
+  <path d="M35 20h18v7.5H43.7v5.7h8.2v7.1h-8.2V52H35V20Z" fill="url(#mark)"/>
+  <rect x="10" y="10" width="10" height="2" rx="1" fill="#8b5cf6"/>
+  <rect x="44" y="52" width="10" height="2" rx="1" fill="#d97706"/>
 </svg>
