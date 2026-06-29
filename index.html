@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" xml:lang="en">
   <head>
     <title>Juri Fabbri | Data Scientist & AI Engineer</title>
@@ -13,12 +13,7 @@
     />
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
     <link rel="stylesheet" href="assets/css/main.css?v=18" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      sizes="any"
-      href="/favicon.svg?v=4"
-    />
+    <link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg?v=4" />
   </head>
   <body class="is-preload" data-theme="dark">
     <div class="page">
@@ -93,9 +88,7 @@
               </div>
               <div>
                 <dt>Currently exploring</dt>
-                <dd>
-                  RL environments that admit when they are guessing.
-                </dd>
+                <dd>RL environments that admit when they are guessing.</dd>
               </div>
               <div>
                 <dt>Location</dt>
@@ -109,12 +102,17 @@
           <div>
             <span>01</span>
             <strong>AI engineering</strong>
-            <p>RAG, agents, evaluation, document workflows, and useful GenAI.</p>
+            <p>
+              RAG, agents, evaluation, document workflows, and useful GenAI.
+            </p>
           </div>
           <div>
             <span>02</span>
             <strong>Data products</strong>
-            <p>Models, dashboards, pipelines, RL experiments, and decisions with receipts.</p>
+            <p>
+              Models, dashboards, pipelines, RL experiments, and decisions with
+              receipts.
+            </p>
           </div>
           <div>
             <span>03</span>
@@ -172,14 +170,10 @@
           </div>
 
           <div class="projects-grid">
-            <a
-              class="project-card"
-              href="websmith/"
-              aria-label="WebSmith page"
-            >
+            <a class="project-card" href="websmith/" aria-label="WebSmith page">
               <div
                 class="project-thumb"
-                style="--thumb-image: url('../../data/websmith.jpg')"
+                style="--thumb-image: url(&quot;../../data/websmith.jpg&quot;)"
               >
                 <span>WebSmith</span>
               </div>
@@ -207,7 +201,9 @@
             >
               <div
                 class="project-thumb"
-                style="--thumb-image: url('../../data/oracle_bets.jpg')"
+                style="
+                  --thumb-image: url(&quot;../../data/oracle_bets.jpg&quot;);
+                "
               >
                 <span>Oracle Bets</span>
               </div>
@@ -235,7 +231,9 @@
             >
               <div
                 class="project-thumb"
-                style="--thumb-image: url('../../data/ontology-atlas.jpg')"
+                style="
+                  --thumb-image: url(&quot;../../data/ontology-atlas.jpg&quot;);
+                "
               >
                 <span>Ontology Atlas</span>
               </div>
@@ -243,8 +241,8 @@
                 <h3>Ontology Atlas</h3>
                 <p>
                   Turns a codebase and its data into a curated knowledge graph,
-                  a generated wiki, and an evidence-first portal — Graphify-powered
-                  and GraphRAG-ready.
+                  a generated wiki, and an evidence-first portal —
+                  Graphify-powered and GraphRAG-ready.
                 </p>
                 <div class="tag-row">
                   <span>Knowledge graph</span>
@@ -369,10 +367,10 @@
 
         // Subtle scroll-reveal for sections + cards (respects reduced motion).
         const prefersReduced = window.matchMedia(
-          "(prefers-reduced-motion: reduce)"
+          "(prefers-reduced-motion: reduce)",
         ).matches;
         const revealTargets = document.querySelectorAll(
-          ".section-heading, .project-card, .service-card, .work-strip > div, .signal-panel, .contact"
+          ".section-heading, .project-card, .service-card, .work-strip > div, .signal-panel, .contact",
         );
         if (prefersReduced || !("IntersectionObserver" in window)) {
           revealTargets.forEach((el) => el.classList.add("is-revealed"));
@@ -390,7 +388,7 @@
                 }
               });
             },
-            { rootMargin: "0px 0px -8% 0px", threshold: 0.12 }
+            { rootMargin: "0px 0px -8% 0px", threshold: 0.12 },
           );
           revealTargets.forEach((el) => io.observe(el));
         }
