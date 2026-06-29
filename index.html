@@ -55,7 +55,8 @@
           <div class="hero-content">
             <p class="eyebrow">Data Scientist / AI Engineer / AI Tutor</p>
             <h1 id="hero-title">
-              I build AI systems, data products, and useful automations.
+              I build <span class="accent">AI systems</span>, data products, and
+              useful automations.
             </h1>
             <p class="lead">
               After hours, sports models and RL agents keep turning my "quick
@@ -184,34 +185,6 @@
           <div class="projects-grid">
             <a
               class="project-card"
-              href="https://github.com/Yureehh/Oracle-Bets"
-              rel="noopener noreferrer"
-              target="_blank"
-              aria-label="OracleBets repository"
-            >
-              <div
-                class="project-thumb"
-                style="--thumb-image: url('../../data/oracle_bets.jpg')"
-              >
-                <span>OracleBets</span>
-              </div>
-              <div class="project-body">
-                <h3>OracleBets</h3>
-                <p>
-                  A sports and esports prediction engine that turns match
-                  history, player signals, and market movement into
-                  probabilistic betting insights.
-                </p>
-                <div class="tag-row">
-                  <span>Prediction</span>
-                  <span>Sports analytics</span>
-                  <span>Python</span>
-                </div>
-              </div>
-            </a>
-
-            <a
-              class="project-card"
               href="websmith/"
               aria-label="WebSmith page"
             >
@@ -238,28 +211,56 @@
 
             <a
               class="project-card"
-              href="https://github.com/Yureehh/Extractly"
+              href="https://github.com/Yureehh/Oracle-Bets"
               rel="noopener noreferrer"
               target="_blank"
-              aria-label="Extractly repository"
+              aria-label="Oracle Bets repository"
             >
               <div
                 class="project-thumb"
-                style="--thumb-image: url('../../data/extractly.jpg')"
+                style="--thumb-image: url('../../data/oracle_bets.jpg')"
               >
-                <span>Extractly</span>
+                <span>Oracle Bets</span>
               </div>
               <div class="project-body">
-                <h3>Extractly</h3>
+                <h3>Oracle Bets</h3>
                 <p>
-                  An AI-powered document intelligence system that classifies
-                  files, extracts schema-aware metadata, and turns messy
-                  documents into structured, traceable data.
+                  A sports and esports prediction engine that turns match
+                  history, player signals, and market movement into
+                  probabilistic betting insights.
                 </p>
                 <div class="tag-row">
-                  <span>GenAI</span>
-                  <span>Document AI</span>
-                  <span>Documents</span>
+                  <span>Prediction</span>
+                  <span>Sports analytics</span>
+                  <span>Python</span>
+                </div>
+              </div>
+            </a>
+
+            <a
+              class="project-card"
+              href="https://github.com/Yureehh/ontology_atlas"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="Ontology Atlas repository"
+            >
+              <div
+                class="project-thumb"
+                style="--thumb-image: url('../../data/ontology-atlas.jpg')"
+              >
+                <span>Ontology Atlas</span>
+              </div>
+              <div class="project-body">
+                <h3>Ontology Atlas</h3>
+                <p>
+                  Turns a codebase and its data into a curated knowledge graph,
+                  a generated wiki, and an evidence-first portal — Graphify-powered
+                  and GraphRAG-ready.
+                </p>
+                <div class="tag-row">
+                  <span>Knowledge graph</span>
+                  <span>GraphRAG</span>
+                  <span>Python</span>
                 </div>
               </div>
             </a>
@@ -376,6 +377,34 @@
             showToast(target, target.dataset.toast || "Copied");
           });
         });
+
+        // Subtle scroll-reveal for sections + cards (respects reduced motion).
+        const prefersReduced = window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches;
+        const revealTargets = document.querySelectorAll(
+          ".section-heading, .project-card, .service-card, .work-strip > div, .signal-panel, .contact"
+        );
+        if (prefersReduced || !("IntersectionObserver" in window)) {
+          revealTargets.forEach((el) => el.classList.add("is-revealed"));
+        } else {
+          revealTargets.forEach((el, i) => {
+            el.classList.add("reveal-up");
+            el.style.transitionDelay = `${Math.min((i % 4) * 70, 210)}ms`;
+          });
+          const io = new IntersectionObserver(
+            (entries, obs) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("is-revealed");
+                  obs.unobserve(entry.target);
+                }
+              });
+            },
+            { rootMargin: "0px 0px -8% 0px", threshold: 0.12 }
+          );
+          revealTargets.forEach((el) => io.observe(el));
+        }
       });
     </script>
   </body>

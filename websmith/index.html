@@ -527,6 +527,34 @@
             );
           });
         });
+
+        // Subtle scroll-reveal for cards + sections (respects reduced motion).
+        const prefersReduced = window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches;
+        const revealTargets = document.querySelectorAll(
+          ".section-heading, .proof-strip > div, .why-grid article, .steps article, .offer-grid article, .about-card, .cta"
+        );
+        if (prefersReduced || !("IntersectionObserver" in window)) {
+          revealTargets.forEach((el) => el.classList.add("is-revealed"));
+        } else {
+          revealTargets.forEach((el, i) => {
+            el.classList.add("reveal-up");
+            el.style.transitionDelay = `${Math.min((i % 4) * 70, 210)}ms`;
+          });
+          const io = new IntersectionObserver(
+            (entries, obs) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("is-revealed");
+                  obs.unobserve(entry.target);
+                }
+              });
+            },
+            { rootMargin: "0px 0px -8% 0px", threshold: 0.12 }
+          );
+          revealTargets.forEach((el) => io.observe(el));
+        }
       });
     </script>
   </body>
