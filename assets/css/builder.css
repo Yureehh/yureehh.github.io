@@ -665,19 +665,20 @@ h1 {
   }
 
   .portfolio-link {
-    min-height: 40px;
+    min-height: 44px;
     font-size: 0.78rem;
-    padding: 8px 10px;
+    padding: 8px 12px;
   }
 
   .lang-switch button {
-    min-width: 34px;
+    min-width: 36px;
+    min-height: 44px;
     padding: 8px;
   }
 
   .theme-toggle {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
   }
 
   main {
@@ -705,9 +706,13 @@ h1 {
 
   .hero-actions {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 10px;
     margin-top: 24px;
+  }
+
+  .btn {
+    min-height: 50px;
   }
 
   .hero-summary {
@@ -762,6 +767,40 @@ h1 {
   .hero-actions .btn,
   .cta .btn {
     width: 100%;
+  }
+}
+
+/* Small phones (portrait): tighten rhythm */
+@media (max-width: 400px) {
+  .topbar,
+  main {
+    width: min(100% - 20px, 1180px);
+  }
+
+  main {
+    gap: 34px;
+  }
+
+  .hero-shell {
+    padding: 18px;
+  }
+
+  .hero-summary,
+  .why-grid article,
+  .steps article,
+  .offer-grid article,
+  .proof-strip div,
+  .about-card,
+  .cta {
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: clamp(1.8rem, 9vw, 2.3rem);
+  }
+
+  .steps span {
+    font-size: 2.1rem;
   }
 }
 

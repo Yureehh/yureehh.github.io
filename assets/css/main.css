@@ -856,8 +856,8 @@ body[data-theme="light"] .social-x {
   }
 
   .theme-toggle {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
   }
 
   main {
@@ -894,17 +894,17 @@ body[data-theme="light"] .social-x {
 
   .hero-actions {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 10px;
     margin-top: 22px;
   }
 
-  .hero-actions .btn:first-child {
-    grid-column: 1 / -1;
+  .hero-actions .btn {
+    width: 100%;
   }
 
   .btn {
-    min-height: 48px;
+    min-height: 50px;
   }
 
   .signal-panel {
@@ -963,7 +963,8 @@ body[data-theme="light"] .social-x {
   }
 
   .project-thumb {
-    min-height: 128px;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
   }
 
   .hero-content,
@@ -994,6 +995,45 @@ body[data-theme="light"] .social-x {
 
   .service-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Small phones (portrait): tighten rhythm so nothing feels cramped */
+@media (max-width: 400px) {
+  .page {
+    width: min(100% - 20px, 1180px);
+  }
+
+  main {
+    gap: 34px;
+  }
+
+  .hero-content,
+  .signal-panel,
+  .service-card,
+  .project-body,
+  .contact {
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: clamp(1.78rem, 9.2vw, 2.2rem);
+  }
+
+  .lead {
+    font-size: 0.96rem;
+  }
+
+  .availability-pill {
+    font-size: 0.84rem;
+  }
+
+  .project-thumb {
+    aspect-ratio: 16 / 10;
+  }
+
+  .tag-row span {
+    font-size: 0.78rem;
   }
 }
 
