@@ -5,14 +5,14 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
+      content="width=device-width, initial-scale=1"
     />
     <meta
       name="description"
       content="WebSmith di Juri Fabbri: siti web professionali, posizionamento chiaro e automazioni operative per freelance, PMI e attività locali."
     />
     <link rel="stylesheet" href="../assets/css/fontawesome-all.min.css" />
-    <link rel="stylesheet" href="../assets/css/builder.css?v=16" />
+    <link rel="stylesheet" href="../assets/css/builder.css?v=17" />
     <link
       rel="icon"
       type="image/svg+xml"
@@ -173,8 +173,8 @@
           >
         </div>
         <div>
-          <strong data-it="Stack proporzionato" data-en="Right-sized stack"
-            >Stack proporzionato</strong
+          <strong data-it="Facile da gestire" data-en="Easy to maintain"
+            >Facile da gestire</strong
           >
           <span
             data-it="Soluzioni robuste, veloci e sostenibili per il tuo livello di business."
@@ -187,9 +187,9 @@
             >Un partner tecnico</strong
           >
           <span
-            data-it="Un unico ragionamento tra marketing, tecnologia e gestione lead."
-            data-en="One joined-up view across marketing, technology, and lead handling."
-            >Un unico ragionamento tra marketing, tecnologia e gestione lead.</span
+            data-it="Parli direttamente con chi progetta e sviluppa il tuo sito."
+            data-en="Work directly with the person designing and building your site."
+            >Parli direttamente con chi progetta e sviluppa il tuo sito.</span
           >
         </div>
       </section>
@@ -200,11 +200,10 @@
             Perché WebSmith
           </p>
           <h2
-            data-it="Il sito non è una vetrina: è il primo punto di qualificazione del tuo cliente."
-            data-en="Your website is not a showcase: it is the first qualification point for your customer."
+            data-it="Un sito che spiega cosa fai e rende semplice contattarti."
+            data-en="A website that explains your work and makes it easy to contact you."
           >
-            Il sito non è una vetrina: è il primo punto di qualificazione del
-            tuo cliente.
+            Un sito che spiega cosa fai e rende semplice contattarti.
           </h2>
         </div>
         <div class="why-grid">
@@ -251,11 +250,10 @@
         <div class="section-heading">
           <p class="eyebrow" data-it="Metodo" data-en="Method">Metodo</p>
           <h2
-            data-it="Un processo pensato per arrivare a una pagina vendibile, non a un cantiere infinito."
-            data-en="A process designed to reach a sellable page, not an endless construction site."
+            data-it="Dalla prima conversazione alla pubblicazione."
+            data-en="From our first conversation to launch."
           >
-            Un processo pensato per arrivare a una pagina vendibile, non a un
-            cantiere infinito.
+            Dalla prima conversazione alla pubblicazione.
           </h2>
         </div>
 
@@ -321,11 +319,10 @@
             Cosa posso creare
           </p>
           <h2
-            data-it="Non pacchetti generici: componenti digitali che aiutano il cliente a capirti e te a gestire meglio la domanda."
-            data-en="Not generic packages: digital components that help customers understand you and help you manage demand better."
+            data-it="Il tuo sito, i tuoi contenuti, un modo migliore di gestire le richieste."
+            data-en="Your website, your content, a better way to handle inquiries."
           >
-            Non pacchetti generici: componenti digitali che aiutano il cliente
-            a capirti e te a gestire meglio la domanda.
+            Il tuo sito, i tuoi contenuti, un modo migliore di gestire le richieste.
           </h2>
         </div>
 
@@ -469,6 +466,7 @@
           });
           languageButtons.forEach((button) => {
             button.classList.toggle("active", button.dataset.langButton === lang);
+            button.setAttribute("aria-pressed", String(button.dataset.langButton === lang));
           });
           if (persist) localStorage.setItem("websmith-language", lang);
         };
@@ -500,6 +498,7 @@
         const showToast = (target, message) => {
           const toast = document.createElement("div");
           toast.className = "copy-toast";
+          toast.setAttribute("role", "status");
           const copiedText = target.dataset.copy;
           toast.innerHTML = copiedText
             ? `<strong>${message}</strong><span>${copiedText}</span>`
@@ -513,48 +512,25 @@
         };
 
         document.querySelectorAll("[data-copy]").forEach((target) => {
-          target.addEventListener("click", () => {
+          target.addEventListener("click", async () => {
             const text = target.dataset.copy;
             const lang = document.documentElement.lang || "it";
             if (navigator.clipboard && window.isSecureContext) {
-              navigator.clipboard.writeText(text).catch(() => {});
+              try {
+                await navigator.clipboard.writeText(text);
+                showToast(target, lang === "it" ? target.dataset.toastIt : target.dataset.toastEn);
+                return;
+              } catch {}
             }
             showToast(
               target,
               lang === "it"
-                ? target.dataset.toastIt || "Email copiata"
-                : target.dataset.toastEn || "Email copied"
+                ? "Scrivimi a questo indirizzo"
+                : "You can reach me here"
             );
           });
         });
 
-        // Subtle scroll-reveal for cards + sections (respects reduced motion).
-        const prefersReduced = window.matchMedia(
-          "(prefers-reduced-motion: reduce)"
-        ).matches;
-        const revealTargets = document.querySelectorAll(
-          ".section-heading, .proof-strip > div, .why-grid article, .steps article, .offer-grid article, .about-card, .cta"
-        );
-        if (prefersReduced || !("IntersectionObserver" in window)) {
-          revealTargets.forEach((el) => el.classList.add("is-revealed"));
-        } else {
-          revealTargets.forEach((el, i) => {
-            el.classList.add("reveal-up");
-            el.style.transitionDelay = `${Math.min((i % 4) * 70, 210)}ms`;
-          });
-          const io = new IntersectionObserver(
-            (entries, obs) => {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add("is-revealed");
-                  obs.unobserve(entry.target);
-                }
-              });
-            },
-            { rootMargin: "0px 0px -8% 0px", threshold: 0.12 }
-          );
-          revealTargets.forEach((el) => io.observe(el));
-        }
       });
     </script>
   </body>
